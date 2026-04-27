@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pranav's Pickles!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Pranav's Pickles!</h1>
+
+    <div class="game-container">
+        <p id="dilemma-number">Dilemma 1 of 12</p>
+
+        <p id="question" class="question">
+            Would you save 2 strangers or 1 stranger?
+        </p>
+
+        <p id="context" class="context"></p>
+
+        <div class="choices">
+            
+            <button id="option-a" onclick="chooseOption('A')"> 👥👥 Save 2 strangers </button>
+            <button id="option-b" onclick="chooseOption('B')"> 👤 Save 1 stranger </button>
+        </div>
+
+        <p id="feedback"></p>
+
+        <button id="next-button" onclick="nextQuestion()" style="display: none;">
+            Next
+        </button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
